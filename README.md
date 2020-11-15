@@ -1,5 +1,5 @@
 # socialismAlg
-Just for fun!
+旨在解决一些世界性难题——Just for fun!
 ## 说明：
 - 一周推一次题目，题目数量建议为：2 ;
 - 题目描述放置于sub文件夹
