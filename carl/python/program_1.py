@@ -1,6 +1,6 @@
 # for program_1 
 class Solution(object):
-    def findLengthOfLCIS(self,nums):
+    def find_leng_for_lcis(self,nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -24,5 +24,5 @@ class Solution(object):
         
 if __name__ == "__main__":
   nums=[1,3,5,4,7]
-  solution=Solution().findLengthOfLCIS(nums)
+  solution=Solution().find_leng_for_lcis(nums)
   print(solution)
