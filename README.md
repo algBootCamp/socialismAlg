@@ -1,0 +1,2 @@
+# socialismAlg
+Just for fun!
