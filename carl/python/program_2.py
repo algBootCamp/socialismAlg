@@ -20,7 +20,6 @@ class Solution(object):
                 if nums[index] < nums[j]:
                     now_len += 1
                     index = j
-
             if max_len < now_len:
                 max_len = now_len
             len_list.append(max_len)
@@ -33,7 +32,6 @@ class Solution(object):
             if len_list[0] == num:
                 max_len += 1
         return max_len
-
 
 if __name__ == "__main__":
     nums1 = [1, 0, 3, 2, 5, 4, 7]
