@@ -27,7 +27,7 @@ class Solution(object):
         len_list.append(1)
         max_len = 1
         len_list.sort(reverse=True)
-        # print(len_list)
+        print(len_list)
         for num in len_list[1:]:
             if len_list[0] == num:
                 max_len += 1
