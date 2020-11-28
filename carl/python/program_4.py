@@ -57,10 +57,10 @@ class ChainTable(object):
       return res
 
     split_num=self.length//k
-    print(split_num)
+    # print(split_num)
     remainder=self.length%k
-    print(remainder)
-    print(self.length)
+    # print(remainder)
+    # print(self.length)
     cur_node=self.head
     count=0
     while cur_node:
