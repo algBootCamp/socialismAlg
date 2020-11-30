@@ -23,11 +23,11 @@ public class program2 {
             for(int j=0;j<i;j++)
             {
                 if(arr[i]>arr[j]){
-                    //第一次出现
+                    //后一个长度小于前一个 则该组合第一次出现
                     if(dp[j]+1>dp[i])
                     {
-                        dp[i]=dp[j]+1;
-                        count[i]=count[j];
+                        dp[i]=dp[j]+1;//长度+1
+                        count[i]=count[j];//更新出现次数
                     }
                     //再次出现 count记录
                     else if(dp[j]+1==dp[i]){

@@ -1,4 +1,4 @@
-public class progrom1 {
+public class program1 {
     public static void main(String[] args) {
         int[] arr1={1,3,5,7,4,6};
         System.out.println(lc(arr1));
