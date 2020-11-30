@@ -19,3 +19,6 @@
 
 解释: 可由子字符串 "abc" 重复四次构成。 (或者子字符串 "abcabc" 重复两次构成。)
 ```
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/repeated-substring-pattern
