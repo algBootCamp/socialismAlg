@@ -38,8 +38,3 @@ if __name__=="__main__":
     print(repeated_substr1(s))
     print(repeated_substr2(s))
     print("-----")
-
-
-  
-  
-  

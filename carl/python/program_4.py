@@ -90,12 +90,3 @@ if __name__=='__main__':
   print("--------------------------------- ----------------------------")
   # case 2
   print(chain_table.split_chain_table_by_k(k=k2))
-
-
-  
-
-    
-
-
-
-      
