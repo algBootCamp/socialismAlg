@@ -26,6 +26,8 @@ def is_repeatd(sub_str:str)->bool:
 
 def find_max_sub_str2(parent_str:str)->int:
   '''双指针 滑动窗口'''
+  if not parent_str:
+    raise("parent_str is None!")
   parent_str_len=len(parent_str)
   next_index_map=dict()
   head,max_len=0,0
