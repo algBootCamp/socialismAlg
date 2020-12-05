@@ -2,7 +2,7 @@ public class Program_5 {
     public static void main(String[] args) {
         String str = "abcdabcdabcdabc1";
         char head = str.charAt(0);
-        label1:
+
         for(int i=1; i < str.length(); i++){
             label2:
             if(head == str.charAt(i)){
@@ -10,7 +10,7 @@ public class Program_5 {
                 for(int k=1;k<i;k++){
                     if(str.charAt(k) != str.charAt(k+i)){
                         System.out.println("从小循环错误判断,循环的摸不是"+i);
-                        //怎么换个i继续战斗
+                        //换个i继续战斗
                         break label2;
                     }
                 }
@@ -19,13 +19,12 @@ public class Program_5 {
                     System.out.println("从不能整除角度判断,循环的摸不是"+i);
                     continue;
                 }
-                //再确定整个串都是在重复这个小序列
+                //再确定整个串都是在重复这个小序w列
                 int count = str.length()/i;
                 for(int l = 1; l < count; l++){
-                    for(int j = 0; j< i;j++) {
+                    for(int j = 0; j< i;j++){
                         if (str.charAt(j) != str.charAt(j + l * i)) {
-                            System.out.println("狗屁不是");
-                            break label1;
+                            break label2;
                         }
                     }
                 }
