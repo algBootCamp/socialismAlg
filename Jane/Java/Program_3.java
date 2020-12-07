@@ -3,7 +3,7 @@ import java.util.HashSet;
 /**
    author: Baijie
  */
-public class program_3 {
+public class Program_3 {
     private static class Node{
         private Node next;
         private Object data;

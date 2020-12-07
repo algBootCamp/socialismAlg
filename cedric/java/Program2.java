@@ -1,5 +1,3 @@
-package com.citicbank.cedric.program;
-
 public class Program2 {
     public static void main(String[] args) {
         Program2 program2 = new Program2();
