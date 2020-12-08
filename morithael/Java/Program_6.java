@@ -25,17 +25,6 @@ public class Program_6 {
             }
             lastIndex.put(tmp, i);
         }
-
         System.out.println(max);
     }
-
-    private static boolean subContain(String str,char chr, int start, int end){
-        for(int i =start; i< end; i++){
-            if(chr == str.charAt(i)){
-                return true;
-            }
-        }
-        return false;
-    }
-
 }
