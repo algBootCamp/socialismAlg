@@ -1,30 +1,31 @@
+import java.util.*;
 
 //无重复最长子串
 public class Program_6 {
-    public static void main(String[] args) {
-        String str = "bbbbba";
-        int max =0;
+    public static void main(String[] args){
+        int max = 0;
+        String str = "pwwkew";
         int length = str.length();
         int start = 0;
-        int end = 0;
-        while (end <length){
-            char tmp = str.charAt(end);
-            if(!subContain(str,tmp,start,end)){
-                end++;
-                if(end == length){
-                    int continued = end - start;
-                    if(continued > max){
-                        max = continued;
-                    }
-                }
-            }else {
-                int continued = end - start;
-                if(continued > max){
+        int i = 0;
+        Map<Character, Integer> lastIndex = new HashMap<>();
+        for (i = 0; i < length; i++){
+            char tmp = str.charAt(i);
+            if (lastIndex.containsKey(tmp)){
+                int continued = i - start;
+                if (continued > max){
                     max = continued;
                 }
-                start += 1;
+                start = lastIndex.get(tmp) + 1;
+            }else if(i == (length -1)){
+                int continued = i - start +1;
+                if (continued > max){
+                    max = continued;
+                }
             }
+            lastIndex.put(tmp, i);
         }
+
         System.out.println(max);
     }
 
