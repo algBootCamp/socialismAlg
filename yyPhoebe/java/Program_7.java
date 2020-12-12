@@ -1,4 +1,4 @@
-public class Program_6 {
+public class Program_7 {
 
 	public int findOnlyDulNumber(int arr[]) {
 		
