@@ -1,5 +1,6 @@
 import sun.reflect.generics.tree.Tree;
 
+//https://leetcode-cn.com/problems/balanced-binary-tree
 public class Program9 {
     public static class TreeNode{
         int val;
@@ -16,6 +17,7 @@ public class Program9 {
         }
     }
 
+    //自顶向下 O(nlogn)
     public static boolean isBalanced(TreeNode root) {
         if(root == null){
             return true;
@@ -32,6 +34,7 @@ public class Program9 {
         }
     }
 
+    //自底向上  O(n)
     public static boolean isBalanced2(TreeNode root){
         return getHeight2(root)>=0;
     }
