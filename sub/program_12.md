@@ -11,5 +11,11 @@
 
 ![Image](sub_resources/tree_struct_2.png)
 
+提示：
+```
+树中节点的数量介于 1 和 500 之间。
+0 <= Node.val <= 500
+每个节点的值都是独一无二的。
+```
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/smallest-subtree-with-all-the-deepest-nodes

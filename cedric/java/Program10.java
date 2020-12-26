@@ -8,7 +8,7 @@ import java.util.Queue;
 public class Program10 {
     public static void main(String[] args) {
         Program10 program10 = new Program10();
-        // test case:
+        // test case
         TreeNode root = new TreeNode(1), l = new TreeNode(2), r = new TreeNode(3),
                 l1l = new TreeNode(4), l1r = new TreeNode(5),
                 r1l = new TreeNode(6), r1r = new TreeNode(7);
