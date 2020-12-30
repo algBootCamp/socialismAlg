@@ -21,7 +21,7 @@ public class Program10 {
         LinkedList<TreeNode> list = new LinkedList<>();
         list.add(root);
         while (!list.isEmpty()){
-            Program10.TreeNode node = list.poll();
+            TreeNode node = list.poll();
             System.out.print(node.val+" ");
             if(node.left != null){
                 list.offer(node.left);

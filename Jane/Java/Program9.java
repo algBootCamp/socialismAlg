@@ -1,4 +1,3 @@
-import sun.reflect.generics.tree.Tree;
 
 //https://leetcode-cn.com/problems/balanced-binary-tree
 public class Program9 {
