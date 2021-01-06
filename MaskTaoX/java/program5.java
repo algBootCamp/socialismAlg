@@ -1,11 +1,8 @@
 public class program5 {
-    public static void main(String[] args) {
-
-    }
-
+    //秀
+    //TODO
     static boolean judg(String s){
-
-
-        return true;
+            String str = s + s;
+            return str.substring(1, str.length() - 1).contains(s);
     }
 }
