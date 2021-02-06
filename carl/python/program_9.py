@@ -1,4 +1,4 @@
-# for program_10.md
+# for program_9.md
 class BiTreeNode(object):
   def __init__(self,data=None):
     self.data=data
@@ -16,8 +16,8 @@ class BiTree(object):
       item=data_or_node
     else:
       item=BiTreeNode(data=data_or_node)
-    
-
+    if data_or_node is None:
+      item=None
     if self.root is None:
       self.root=item
       return
@@ -36,25 +36,31 @@ class BiTree(object):
       else:
         queue.append(cur_node.rchild)
 
-  def get_levelorder(self):
-    if self.root is None:
-      print("该树为空！")
-      return
-    res=[]
-    queue=[self.root]
-    while queue:
-      cur_node=queue.pop(0)
-      res.append(cur_node)
-      if cur_node.lchild:
-        queue.append(cur_node.lchild)
-      if cur_node.rchild:
-        queue.append(cur_node.rchild)
-    return res
+  def get_max_depth(self,node:BiTreeNode)->int:
+    if not node:
+      return 0
+    return max(self.get_max_depth(node.lchild),
+               self.get_max_depth(node.rchild))+1
+
+  def is_balanced(self,node:BiTreeNode)->bool:
+    if node is None or (node.lchild is None and node.rchild is None):
+      return True
+    
+    if abs(self.get_max_depth(node.lchild)-self.get_max_depth(node.rchild))<=1:
+      return self.is_balanced(node.lchild) and self.is_balanced(node.rchild)
+    else:
+      return False
 
 if __name__=='__main__':
-  nums=[1,2,3,4,5,6,7]
+  nums = [3,9,20,None,None,15,7]
   biTree=BiTree()
   for num in nums:
     biTree.add(num)
-  res=biTree.get_levelorder()
-  print([node.data for node in res ])
+  print(biTree.is_balanced(biTree.root))
+  print("-"*8)
+  nums = [1,2,2,3,3,None,None,4,4]
+  for num in nums:
+    biTree.add(num)
+  print(biTree.is_balanced(biTree.root))
+
+
