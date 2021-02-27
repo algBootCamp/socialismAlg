@@ -29,8 +29,8 @@ small = [4]
 ```
 提示：
 ```
-big.length <= 100000
-1 <= small.length <= 100000
+big.length<= 100000
+1 <= small.length<= 100000
 ```
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/shortest-supersequence-lcci
