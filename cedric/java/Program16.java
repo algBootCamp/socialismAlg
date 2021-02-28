@@ -13,7 +13,7 @@ public class Program16 {
         int[] nums = new int[]{1, 3, -1, -3, 5, 3, 6, 7};
         System.out.println(Arrays.toString(program16.medianSlidingWindow(nums, 3)));
         System.out.println(Arrays.toString(program16.medianSlidingWindow(nums, 2)));
-        System.out.println(Arrays.toString(program16.medianSlidingWindow(new int[]{1,2,3,4,2,3,1,4,2}, 3)));
+        System.out.println(Arrays.toString(program16.medianSlidingWindow(new int[]{1, 2, 3, 4, 2, 3, 1, 4, 2}, 3)));
     }
 
     private double[] medianSlidingWindow(int[] nums, int k) {
@@ -107,8 +107,14 @@ public class Program16 {
         }
 
         double getMedian() {
-            assert !small.isEmpty() && !large.isEmpty();
-            return (k & 1) == 0 ? (small.peek() + large.peek()) / 2.0 : small.peek();
+            if ((k & 1) == 0) {
+                // be very careful for overflow
+                assert !small.isEmpty() && !large.isEmpty();
+                return ((double) small.peek() + large.peek()) / 2;
+            } else {
+                assert !small.isEmpty();
+                return small.peek();
+            }
         }
     }
 }
