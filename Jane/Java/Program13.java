@@ -4,7 +4,7 @@
  */
 public class Program13 {
     public boolean findNumberIn2DArray(int[][] matrix, int target) {
-        if(matrix.length == 0){
+        if(matrix==null || matrix.length == 0 || matrix[0].length==0){
             return false;
         }
         int rIdx = 0;
@@ -13,11 +13,9 @@ public class Program13 {
             if(matrix[rIdx][cIdx] == target){
                 return true;
             }else if(matrix[rIdx][cIdx] > target){
-                cIdx -= 1;
-                continue;
+                cIdx --;
             }else {
-                rIdx += 1;
-                continue;
+                rIdx ++;
             }
         }
         return false;
